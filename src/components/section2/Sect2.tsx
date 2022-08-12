@@ -1,7 +1,9 @@
-export default function section2(){
+import './sect2.scss';
+
+export default function Sect2(){
     return(
-        <div>
-            <h1>Section 1</h1>
+        <div className="sect2">
+            <h1>Section 2</h1>
         </div>
     )
 }
