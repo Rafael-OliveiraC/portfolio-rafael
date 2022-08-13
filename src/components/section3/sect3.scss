@@ -1,0 +1,59 @@
+.sect3{
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    h2{
+        text-transform: uppercase;
+        font-size: 2rem;
+    }
+
+    p{
+        font-size: 1rem;
+        font-weight: 300;
+    }
+
+    .tab{
+        margin-top: 3rem;
+        display: flex;
+        background-color: #111;
+        border: 1px solid white;
+        border-radius: 2rem;
+        overflow: hidden;
+
+        div{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 12rem;
+            height: 2.5rem;
+            text-transform: uppercase;
+            font-weight: 600;
+            cursor: pointer;
+            
+            &:nth-child(2){
+                border-left: 1px solid white;
+                border-right: 1px solid white;
+            }
+        }
+
+        .active{
+            background: linear-gradient(45deg, #CB419A 0%, #901AD8 50%, #CB419A 100%);
+            background-size: 200% 200%;
+            animation: hoverTab 10s ease infinite;
+            
+            
+
+        }
+    }
+
+}
+
+@keyframes hoverTab { 
+    0% {background-position: 0% 0%}
+	50% {background-position: 100% 50%}
+	100% {background-position: 0% 0%}
+}

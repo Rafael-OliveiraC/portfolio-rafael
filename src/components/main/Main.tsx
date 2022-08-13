@@ -4,6 +4,7 @@ import text from '../text'
 
 import Sect1 from '../section1/Sect1';
 import Sect2 from '../section2/Sect2';
+import Sect3 from '../section3/Sect3';
 
 export default function Main(){
     const [language, setLanguage] = useState('PT');
@@ -19,7 +20,7 @@ export default function Main(){
                             <a href='#skills'>{newText['header'][1]}</a>
                         </li>
                         <li>
-                            <a>{newText['header'][2]}</a>
+                            <a href='#projects'>{newText['header'][2]}</a>
                         </li>
                         <li>
                             <a>{newText['header'][3]}</a>
@@ -53,6 +54,7 @@ export default function Main(){
             <main>
                 <Sect1 newText={newText}/>
                 <Sect2 newText={newText}/>
+                <Sect3 newText={newText}/>
             </main>
         </div>
     )

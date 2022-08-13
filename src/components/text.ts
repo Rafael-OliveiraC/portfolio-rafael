@@ -17,6 +17,12 @@ const text:any = {
         },
 
         skills: 'Minhas habilidades adquiridas ao longo da minha carreira',
+        projects: 'Meus projetos',
+        projects_tab:{
+            1:'Programação',
+            2:'UI/UX Design',
+            3:'Design',
+        }
     },
 
     EN:{
@@ -35,6 +41,12 @@ const text:any = {
         },
 
         skills: 'My acquired skills throughout my career',
+        projects: 'My projects',
+        projects_tab:{
+            1:'Programming',
+            2:'UI/UX Design',
+            3:'Design',
+        }
     
     }
 }

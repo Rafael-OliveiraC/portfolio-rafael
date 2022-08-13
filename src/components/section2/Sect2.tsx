@@ -46,7 +46,6 @@ function Skill({percent, name, color}:skillsProps){
                         stroke-linecap="round"
                     />
                 </svg>
-
                 <p>{name}</p>
             </div>
         </div>
