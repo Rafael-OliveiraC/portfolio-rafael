@@ -41,9 +41,9 @@ function Skill({percent, name, color}:skillsProps){
                         a 15.9155 15.9155 0 0 1 0 -31.831"
                         fill="none"
                         stroke={color}
-                        stroke-width="3"
-                        stroke-dasharray={`${percent -2} 100`}
-                        stroke-linecap="round"
+                        strokeWidth="3"
+                        strokeDasharray={`${percent - 2} 100`}
+                        strokeLinecap="round"
                     />
                 </svg>
                 <p>{name}</p>
