@@ -5,14 +5,20 @@ import text from '../text'
 import Sect1 from '../section1/Sect1';
 import Sect2 from '../section2/Sect2';
 import Sect3 from '../section3/Sect3';
+import Modal from '../modal/Modal';
 
 export default function Main(){
     const [language, setLanguage] = useState('PT');
+    const [modal, setModal] = useState(true);
+    const [img, setImg] = useState('');
 
     const newText = text[language];
 
     return(
         <div className="main">
+            <Modal onOpen={modal} img={img} onClose={()=>{
+                setModal(false);
+            }}/>
             <header>
                 <nav>
                     <ul>
@@ -52,9 +58,13 @@ export default function Main(){
                 
             </header>
             <main>
+                
                 <Sect1 newText={newText}/>
                 <Sect2 newText={newText}/>
-                <Sect3 newText={newText}/>
+                <Sect3 newText={newText} modal={(img:string)=>{
+                    setImg(img);
+                    setModal(true);
+                }}/>
             </main>
         </div>
     )

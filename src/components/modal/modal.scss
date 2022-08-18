@@ -1,0 +1,35 @@
+#modal{
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #00000099;
+    width: 100vw;
+    height: 100vh;
+    z-index: 99;
+
+    span{
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        font-size: 1.5rem;
+        font-weight: 600;
+        color: #fff;
+        cursor: pointer;
+
+    }
+
+    div{
+        display: flex;
+        justify-content: center;
+        width: 60%;
+        height: 90%;
+        border-radius: 1rem;
+        background-color: #eee;
+
+        img{
+            height: 100%;
+        }
+    }
+}
+
