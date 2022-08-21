@@ -1,16 +1,16 @@
-import './sect2.scss';
+import './skills.scss';
 
-export default function Sect2({newText}:any){
+export default function Skills({text}:any){
     return(
-        <section id='skills' className="sect2">
+        <section id='skills'>
             <article>
-                <h2>{newText['header'][1]}</h2>
-                <p>{newText['skills']}</p>
+                <h2>{text[1]}</h2>
+                <p>{text[2]}</p>
             </article>
             <article>
-                <Skill percent={98} name="Web Development" color="#2C9FA3"/>
-                <Skill percent={83} name="Brand Identity" color="#CB419A"/>
-                <Skill percent={95} name="Logo Design" color="#9A42CF"/>
+                <Skill percent={98} name={text['skills_table'][1]} color="#2C9FA3"/>
+                <Skill percent={83} name={text['skills_table'][2]} color="#CB419A"/>
+                <Skill percent={95} name={text['skills_table'][3]} color="#9A42CF"/>
             </article>
             
             

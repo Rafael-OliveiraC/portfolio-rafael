@@ -1,20 +1,25 @@
-import './sect1.scss';
+import './introdution.scss';
 import document from '../../assets/document.pdf';
 
-export default function Sect1({newText}:any){
+type Props = {
+    text: {
+        title: string;
+        subtitle: string;
+    };
+}
+
+export default function Introdution({text}:Props){
     return(
-        <section className="sect1">
+        <section id='introdution'>
             <article>
                     <h1>
-                        {newText['title'][1]}<br/>{newText['title'][2]} <span>Rafael Colombo</span>
+                        {text['title'][1]}<br/>{text['title'][2]} <span>Rafael Colombo</span>
                     </h1>
                     <p>
-                        {newText['subtitle'][1]}<br />{newText['subtitle'][2]}
+                        {text['subtitle'][1]}<br />{text['subtitle'][2]}
                     </p>
                     <a href={document} download>
-                        <button>
                             Download CV
-                        </button>
                     </a>
                     
             </article>

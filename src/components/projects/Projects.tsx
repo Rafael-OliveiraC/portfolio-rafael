@@ -1,30 +1,33 @@
 import { useState } from 'react';
 import data from '../projects';
-import text from '../text';
-import './sect3.scss';
+import './projects.scss';
 
-export default function Sect3(props:any){
-    const newText = props.newText;
+export default function Projects(props:any){
+    const text = props.text;
 
     const [activeTab, setActiveTab] = useState(0);
     return(
-        <section id='projects' className="sect3">
-            <h2>{newText['header'][2]}</h2>
-            <p>{newText['projects']}</p>
-            <Tab newText={newText} table={(tab:number) => {
+        <section id='projects'>
+            <h2>{text[1]}</h2>
+            <p>{text[2]}</p>
+            <Tab text={text['projects_tab']} table={(tab:number) => {
                 setActiveTab(tab)
             }}/>
             <TableList activeTab={activeTab} modal={(img:string)=>{
                 props.modal(img)
             }}/>
-
         </section>
     )
 }
 
-function Tab(props:any){
+type tabProps = {
+    text: string,
+    table: (tab:number) => void
+}
+
+function Tab(props:tabProps){
     const [activeTab, setActiveTab] = useState(0);
-    const newText = props.newText;
+    const text = props.text;
 
     function handleClick(e:any){
         const tabNumber = e.target.dataset.tab;
@@ -34,19 +37,20 @@ function Tab(props:any){
 
     return(
         <article className='tab'>
-            <div data-tab={0} className={activeTab == 0 ? 'active' : ''} onClick={(e)=>handleClick(e)}>{newText['projects_tab'][1]}</div>
-            <div data-tab={1} className={activeTab == 1 ? 'active' : ''} onClick={(e)=>handleClick(e)}>{newText['projects_tab'][2]}</div>
-            <div data-tab={2} className={activeTab == 2 ? 'active' : ''} onClick={(e)=>handleClick(e)}>{newText['projects_tab'][3]}</div>
+            <div data-tab={0} className={activeTab == 0 ? 'active' : ''} onClick={(e)=>handleClick(e)}>{text[1]}</div>
+            <div data-tab={1} className={activeTab == 1 ? 'active' : ''} onClick={(e)=>handleClick(e)}>{text[2]}</div>
+            <div data-tab={2} className={activeTab == 2 ? 'active' : ''} onClick={(e)=>handleClick(e)}>{text[3]}</div>
         </article>
     )
 }
 
-function TableList(props:any){
-    const tab = props.activeTab;
+type tableProps = {
+    activeTab: number,
+    modal: (img:string) => void
+}
 
-    function showModal(img:string){
-        props.modal(img)
-    }
+function TableList(props:tableProps){
+    const tab = props.activeTab;
 
     return(
         <article className='project'>
@@ -75,7 +79,6 @@ function TableList(props:any){
                             </div>
                         </div>
                     )
-                
             })}
         </article>
     )

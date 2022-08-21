@@ -5,16 +5,6 @@ const projects:any = {
             link:'https://i.imgur.com/qXQQQ.png',
             text:'snake game'
         },
-        {
-            img:'breve.jpg',
-            link:'https://i.imgur.com/qXQQQ.png',
-            text:'b'
-        },
-        {
-            img:'breve.jpg',
-            link:'https://i.imgur.com/qXQQQ.png',
-            text:'c'
-        },
         
     ],
     1: [ // UI/UX DESIGN

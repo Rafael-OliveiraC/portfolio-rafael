@@ -1,6 +1,6 @@
 #modal{
     position: fixed;
-    display: flex;
+    display: none;
     justify-content: center;
     align-items: center;
     background-color: #00000099;
@@ -31,5 +31,9 @@
             height: 100%;
         }
     }
+}
+
+#modal.show{
+    display: flex;
 }
 

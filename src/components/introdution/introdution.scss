@@ -1,4 +1,4 @@
-.sect1{
+#introdution{
     display: flex;
 
     article{
@@ -22,7 +22,7 @@
             text-shadow: 1px 1px 5px #000;
         }
 
-        button{
+        a{
             color: white;
             padding: 1rem 2rem;
             font-family: 'montserrat', sans-serif;
@@ -33,6 +33,7 @@
             border-radius: 20px;
             cursor: pointer;
             float: right;
+            text-decoration: none;
 
 
             &:hover{
