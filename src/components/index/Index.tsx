@@ -32,6 +32,7 @@ export default function Index(){
                     setModal(true);
                 }}/>
                 <Contact text={text['contact'][language]}/>
+                <p>Criado por Rafael Colombo</p>
             </main>
         </div>
     )

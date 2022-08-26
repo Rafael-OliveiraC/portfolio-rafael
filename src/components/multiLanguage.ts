@@ -75,8 +75,22 @@ const text:any = {
     },
     contact:{
         PT:{
+            1:'Contato',
+            2:'Entre em contato para mais informações',
+            form:{
+                1:'Nome',
+                2:'E-mail',
+                3:'Mensagem',
+            }
         },
         EN:{
+            1:'Contact',
+            2:'Contact us for more information',
+            form:{
+                1:'Name',
+                2:'E-mail',
+                3:'Message',
+            }
         }
     }
 }
